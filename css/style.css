@@ -1,0 +1,34 @@
+body, 
+html,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.title{
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+#container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 4vh;
+    column-gap: 5vw;
+    justify-content: center;
+    padding-bottom: 10rem;
+}
+
+:root{
+    --first-color: #16f
+    --second-color: #ff7
+}
+
+.card-title {
+    background-color: var(--first-color);
+}
