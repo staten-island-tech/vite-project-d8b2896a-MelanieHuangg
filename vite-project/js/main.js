@@ -1,8 +1,6 @@
 import "../style/style.css";
 import {items} from "./items"
 import {DOMSelectors} from './index.js';
-import "../style/style.css";
-
 
 const createCards = {
     create: function () {
