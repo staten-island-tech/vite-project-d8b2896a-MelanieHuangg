@@ -45,8 +45,15 @@ body,
 h1 {
     font-size: var(--h1);
     text-align: center;
+    padding: var(--h5);
 }
 
+
+.store-front {
+    font-size: var(--h2);
+    text-align: center;
+    padding: var(--h5);
+}
 
 
 

@@ -98,3 +98,5 @@ const items = [
         category: "Headphones",
     },
 ]
+
+export{items}
