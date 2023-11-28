@@ -1,0 +1,56 @@
+html,
+body, 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+:root {
+    --dark-blue: #135cc5;
+    --light-blue: #2998ff;
+    --dark-red: #dc2626;
+    --light-red: #f87171;
+
+    --primary: var(--light-blue);
+    --secondary: var(--dark-blue);
+
+    /*typography*/
+    --h1: 7.594rem;
+    --h2: 3.5rem;
+    --h3: 3.375rem;
+    --h4: 2.25rem;
+    --h5: 1.5rem;
+}
+
+.warm {
+    --primary: var(--light-red);
+    --secondary: var(--dark-red);
+}
+
+.cool {
+    --primary: var(--light-blue);
+    --secondary: var(--dark-blue);
+}
+
+.title {
+    background-color: var(--primary);
+}
+
+.store-front {
+    background-color: var(--secondary);
+}
+
+h1 {
+    font-size: var(--h1);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
