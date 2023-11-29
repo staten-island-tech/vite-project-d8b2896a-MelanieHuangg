@@ -29,7 +29,7 @@ const items = [
     },
 
     {
-        name: "iPad",
+        name: "iPad: <br> 10th Generación",
         imgURL: "https://techshop.umich.edu/media/catalog/product/cache/8872124951f387c8ded3f228faa55bea/1/4/145100.jpg",
         cost: "$450",
         category: "iPads",
