@@ -8,13 +8,13 @@ body,
 }
 
 :root {
-    --dark-blue: #135cc5;
-    --light-blue: #2998ff;
-    --dark-red: #dc2626;
-    --light-red: #f87171;
+    --dark-green: #479A72;
+    --light-green: #73BF9A;
+    --dark-purple: #7676E5;
+    --light-purple: #9F9FED;
 
-    --primary: var(--light-blue);
-    --secondary: var(--dark-blue);
+    --primary: var(--light-green);
+    --secondary: var(--dark-green);
 
     /*typography*/
     --h1: 7.594rem;
@@ -25,13 +25,13 @@ body,
 }
 
 .warm {
-    --primary: var(--light-red);
-    --secondary: var(--dark-red);
+    --primary: var(--light-purple);
+    --secondary: var(--dark-purple);
 }
 
 .cool {
-    --primary: var(--light-blue);
-    --secondary: var(--dark-blue);
+    --primary: var(--light-green);
+    --secondary: var(--dark-green);
 }
 
 .title {
@@ -46,7 +46,19 @@ h1 {
     font-size: var(--h1);
     text-align: center;
     padding: var(--h5);
+    font-family: 'Alata', sans-serif;
 }
+
+h2{
+    font-size: var(--h2);
+    margin-bottom: 2rem;
+}
+
+h3{
+    font-size: var(--h4);
+    margin-top: 2rem;
+}
+
 
 
 .store-front {
@@ -55,9 +67,50 @@ h1 {
     padding: var(--h5);
 }
 
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5%;
+
+}
+
+.inner{
+    border: solid black 0.5rem;
+    margin: var(--h2);
+    padding: var(--h2);
+    background-color: var(--primary);
+    border-radius: 1rem;
+    font-family:'Noto Sans', sans-serif;
+
+}
 
 
+.picture{
+    height: 20rem;
+    border-radius: 1rem;
+}
 
+.btn{
+    background-color: #fffff0;
+    font-family:'Noto Sans', sans-serif;
+    padding: 0.5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 1rem;
+    transition: all 0.2s  
+    
+}
+
+.btn:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
+}
 
 
 

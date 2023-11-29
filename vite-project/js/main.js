@@ -28,13 +28,13 @@ import {DOMSelectors} from './index.js';
 const createCards = {
     create: function () {
         items.forEach((items) => {
-            DOMSelectors.box.insertAdjacentHTML(
+            DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `
                 <div class="inner">
                 <h2>${items.name}</h2>
                 <p><img class="picture" src=${items.imgURL}></p>
-                <p>Price: ${items.cost}</p>
+                <h3>Price: ${items.cost}</h3>
                 </div>
                 `
             );
@@ -45,13 +45,13 @@ const createCards = {
         items
         .filter((items) => items.category.includes("Macbooks"))
         .forEach((items) => {
-            DOMSelectors.box.insertAdjacentHTML(
+            DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `
                 <div class="inner">
                 <h2>${items.name}</h2>
                 <p><img class="picture" src=${items.imgURL}></p>
-                <p>Price: ${items.cost}</p>
+                <h3>Price: ${items.cost}</h3>
                 </div>
                 `
             );
@@ -62,13 +62,13 @@ const createCards = {
         items
         .filter((items) => items.category.includes("iPads"))
         .forEach((items) => {
-            DOMSelectors.box.insertAdjacentHTML(
+            DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `
                 <div class="inner">
                 <h2>${items.name}</h2>
                 <p><img class="picture" src=${items.imgURL}></p>
-                <p>Price: ${items.cost}</p>
+                <h3>Price: ${items.cost}</h3>
                 </div>
                 `
             );
@@ -79,13 +79,13 @@ const createCards = {
         items
         .filter((items) => items.category.includes("iPhones"))
         .forEach((items) => {
-            DOMSelectors.box.insertAdjacentHTML(
+            DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `
                 <div class="inner">
                 <h2>${items.name}</h2>
                 <p><img class="picture" src=${items.imgURL}></p>
-                <p>Price: ${items.cost}</p>
+                <h3>Price: ${items.cost}</h3>
                 </div>
                 `
             );
@@ -96,13 +96,13 @@ const createCards = {
         items
         .filter((items) => items.category.includes("iMacs"))
         .forEach((items) => {
-            DOMSelectors.box.insertAdjacentHTML(
+            DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `
                 <div class="inner">
                 <h2>${items.name}</h2>
                 <p><img class="picture" src=${items.imgURL}></p>
-                <p>Price: ${items.cost}</p>
+                <h3>Price: ${items.cost}</h3>
                 </div>
                 `
             );
@@ -113,21 +113,61 @@ const createCards = {
         items
         .filter((items) => items.category.includes("Headphones"))
         .forEach((items) => {
-            DOMSelectors.box.insertAdjacentHTML(
+            DOMSelectors.container.insertAdjacentHTML(
                 "beforeend",
                 `
                 <div class="inner">
                 <h2>${items.name}</h2>
                 <p><img class="picture" src=${items.imgURL}></p>
-                <p>Price: ${items.cost}</p>
+                <h3>Price: ${items.cost}</h3>
                 </div>
                 `
             );
         });
     },
 
+    removeCards: function () {
+        let card = document.querySelectorAll(".inner")
+        card.forEach(card => {
+            card.remove()
+        });
+    },
 
-}
+};
     
 createCards.create(items);
 
+DOMSelectors.macbooks.addEventListener("click", function () {
+    createCards.removeCards(items)
+    createCards.filterMacbooks(items)
+});
+
+DOMSelectors.ipads.addEventListener("click", function () {
+    createCards.removeCards(items)
+    createCards.filteriPads(items)
+});
+
+DOMSelectors.iphones.addEventListener("click", function () {
+    createCards.removeCards(items)
+    createCards.filteriPhones(items)
+});
+
+DOMSelectors.imacs.addEventListener("click", function () {
+    createCards.removeCards(items)
+    createCards.filteriMacs(items)
+});
+
+
+DOMSelectors.headphones.addEventListener("click", function () {
+    createCards.removeCards(items)
+    createCards.filterHeadphones(items)
+});
+
+// let buttons = document.querySelectorAll('button')
+// buttons.forEach((btn => btn.addEventListener("click", function() {
+//     let type = btn.textContent()
+//     let newArr = category.filter((category) => category.category === type)
+//     clearFields()
+//     insertCards(newArr)
+// }
+// )))
