@@ -1,6 +1,6 @@
 import "../style/style.css";
 import {items} from "./items"
-import {DOMSelectors} from './index.js';
+import {DOMSelectors} from './dom.js';
 
 // DOMSelectors.storefront.addEventListener(".btn", function(event) {
 //     event.preventDeafault();
