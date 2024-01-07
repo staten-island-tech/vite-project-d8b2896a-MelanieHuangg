@@ -122,6 +122,7 @@ const createCards = {
                 <h3>Price: ${items.cost}</h3>
                 </div>
                 `
+                
             );
         });
     },
